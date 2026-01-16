@@ -1,0 +1,56 @@
+# Build Folders
+bin/
+obj/
+out/
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.ilk
+*.pdb
+*.idb
+*.log
+*.vspscc
+*.vssscc
+
+# Rider / VSCode settings
+*.DotSettings.user
+.vscode/
+
+# NuGet
+*.nupkg
+packages/
+# If you have a global packages folder
+.nuget/
+
+# Avalonia
+*.xaml.g.cs
+*.Designer.cs
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Publish output
+publish/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User secrets (if used)
+secrets.json

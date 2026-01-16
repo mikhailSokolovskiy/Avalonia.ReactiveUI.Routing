@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:rxui="http://reactiveui.net"
+        xmlns:app="clr-namespace:Avalonia.Routing"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Avalonia.Routing.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="800" Height="450"
+        x:Class="Avalonia.Routing.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Avalonia.Routing">
+    <Grid ColumnDefinitions="*, *">
+        <Grid Grid.Column="0" RowDefinitions="*, Auto">
+            <rxui:RoutedViewHost Router="{Binding LeftRouter.Router}"
+                                 BorderBrush="Black"
+                                 BorderThickness="1"
+                                 CornerRadius="15"
+                                 Margin="15">
+                <rxui:RoutedViewHost.ViewLocator>
+                    <app:RoutingViewLocator />
+                </rxui:RoutedViewHost.ViewLocator>
+            </rxui:RoutedViewHost>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="15">
+                <Button Content="Go back" Command="{Binding LeftGoBackCommand}" />
+                <Button Content="Go next" Command="{Binding LeftGoNextCommand}" />
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1" RowDefinitions="*, Auto">
+            <rxui:RoutedViewHost Router="{Binding RightRouter.Router}"
+                                 BorderBrush="Black"
+                                 BorderThickness="1"
+                                 CornerRadius="15"
+                                 Margin="15">
+                <rxui:RoutedViewHost.ViewLocator>
+                    <app:RoutingViewLocator />
+                </rxui:RoutedViewHost.ViewLocator>
+            </rxui:RoutedViewHost>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="15">
+                <Button Content="Go back" Command="{Binding RightGoBackCommand}" />
+                <Button Content="Go next" Command="{Binding RightGoNextCommand}" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

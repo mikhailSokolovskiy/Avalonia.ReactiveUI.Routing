@@ -1,0 +1,9 @@
+﻿using ReactiveUI;
+
+namespace Avalonia.Routing.Navigation;
+
+//Контекст для навигации левого роутера, для независимой навигации
+public class LeftScreen : IScreen
+{
+    public RoutingState Router { get; } = new();
+}

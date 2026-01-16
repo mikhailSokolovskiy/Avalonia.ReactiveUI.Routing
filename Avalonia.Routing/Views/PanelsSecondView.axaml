@@ -1,0 +1,16 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia.Routing.Views.PanelsSecondView"
+             xmlns:vm="using:Avalonia.Routing.ViewModels"
+             x:DataType="vm:PanelsSecondViewModel">
+    <StackPanel Spacing="10" HorizontalAlignment="Center">
+        <Button Content="click me"/>
+        <ToggleButton Content="Click me" IsChecked="{Binding IsCheck1}"/>
+        <TextBox Width="120" Watermark="Input"></TextBox>
+        <CheckBox IsChecked="{Binding IsCheck2}" Content="check box"></CheckBox>
+        <ComboBox SelectedIndex="1" ItemsSource="{Binding TextList}"/>
+    </StackPanel>
+</UserControl>

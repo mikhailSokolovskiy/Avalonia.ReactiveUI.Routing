@@ -1,0 +1,28 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Avalonia.Routing.Views.InstrumentsFirstView"
+             xmlns:vm="using:Avalonia.Routing.ViewModels"
+             x:DataType="vm:InstrumentsFirstViewModel">
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Spacing="10">
+        <TextBlock FontSize="18" HorizontalAlignment="Center">First page</TextBlock>
+        <ToggleSwitch IsChecked="{Binding IsToggleCheck1}" OnContent="Example Settings 1"
+                      OffContent="Example Settings 1" />
+        <ToggleSwitch IsChecked="{Binding IsToggleCheck2}" OnContent="Example Settings 1"
+                      OffContent="Example Settings 1" />
+        <ToggleSwitch IsChecked="{Binding IsToggleCheck3}" OnContent="Example Settings 1"
+                      OffContent="Example Settings 1" />
+        <ToggleSwitch IsChecked="{Binding IsToggleCheck4}" OnContent="Example Settings 1"
+                      OffContent="Example Settings 1" />
+        <ToggleSwitch IsChecked="{Binding IsToggleCheck5}" OnContent="Example Settings 1"
+                      OffContent="Example Settings 1" />
+        <ToggleSwitch IsChecked="{Binding IsToggleCheck6}" OnContent="Example Settings 1"
+                      OffContent="Example Settings 1" />
+        <ToggleSwitch IsChecked="{Binding IsToggleCheck7}" OnContent="Example Settings 1"
+                      OffContent="Example Settings 1" />
+    </StackPanel>
+</UserControl>
